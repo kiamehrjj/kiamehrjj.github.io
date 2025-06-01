@@ -4,41 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CPT Game Designers - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1e1e24, #2a2a35, #1e1e24);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     header {
-      background: #111;
-      color: #fff;
-      padding: 1em 0;
+      background: rgba(70, 129, 137, 0.8);
+      padding: 2.5em 0;
       text-align: center;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      border-bottom: 4px solid #ac3931;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #ffffff;
+      text-shadow: 0 0 15px #ffffff;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #d3d3d3;
+      margin-top: 0.5rem;
     }
     nav {
-      background: #333;
-      padding: 0.5em;
+      background: rgba(172, 57, 49, 0.85);
+      padding: 1em 0;
       text-align: center;
+      box-shadow: 0 0 15px #ac3931;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: #ffffff;
+      margin: 0 30px;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: relative;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #ffffff;
+      transition: width 0.3s ease;
       margin: auto;
     }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 6px #ffffff;
+    }
+    section {
+      padding: 70px 40px;
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: rgba(46, 46, 60, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(214, 40, 40, 0.5);
+      backdrop-filter: blur(10px);
+    }
     h2 {
-      color: #003366;
+      font-size: 2.5rem;
+      color: #d62828;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #ac3931;
+    }
+    p, li {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #56c0c5;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 6px #468189;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+    }
+    ul li::before {
+      content: "🎮";
+      position: absolute;
+      left: 0;
+      color: #d62828;
     }
     footer {
-      background: #111;
-      color: #fff;
+      background: rgba(70, 129, 137, 0.9);
+      color: #ffffff;
       text-align: center;
-      padding: 1em 0;
+      padding: 2em 0;
+      margin-top: 60px;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+      section {
+        padding: 40px 20px;
+      }
     }
   </style>
 </head>
@@ -50,27 +155,39 @@
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html">   	Home</a>
     <a href="booking.html">Book</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="guidelines.html">Guidelines</a>
   </nav>
-
+<div style="text-align: center;">
+  <video width="800" controls>
+    <source src="CPTGameDesigners.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
   <section>
-    <h2>Welcome to CPT Game Designers</h2>
+    <h2>Transform Your Game Ideas into Reality</h2>
     
-            <p>At <strong>CPT Game Designers</strong>, we specialize in crafting engaging and innovative games. Whether you’re an individual with a game idea or a company looking for design expertise, our team is here to help.</p>
-            <ul>
-                <li>🎮 Custom Game Design</li>
-                <li>🤝 B2B Game Development Support</li>
-                <li>📅 Book Consultations Easily Online</li>
-            </ul>
+            <p>We bring your gaming visions to life! Whether you're an individual with a brilliant concept or a studio needing additional talent, our team of expert game designers is ready to turn your ideas into immersive, polished experiences.</p>
+            <h3>Book a Consultation</h3>
+            <p>Ready to start your journey? Book a consultation with our design team today! Before you do, check out our preparation guidelines to ensure a productive first meeting.</p>
+            <p><a href="booking.html">Book Now</a> | <a href="guidelines.html">Preparation Guidelines</a></p>
+            <h3>Our Mission</h3>
+            <p>We’re passionate about interactive experiences that entertain, challenge, and inspire! Discover the story behind CPT Game Designers and our commitment to excellence.</p>
+            <p><a href="about.html">About Us</a></p>
+            <h3>Contact</h3>
+            <p>Have questions or need more information? Visit our Contact page for multiple ways to reach our team and find our headquarters location.</p>
+            <p><a href="contact.html">Contact Info</a></p>
+            <h3>Portfolio</h3>
+            <p>Experience our craftsmanship firsthand! Browse our showcase of completed projects to see the quality and innovation we bring to every game we develop.</p>
+            <p><a href="portfolio.html">View Portfolio</a></p>
         
   </section>
 
   <footer>
-    <p>&copy; 2025 CPT Game Designers. All rights reserved.</p>
+    <p>&copy; 2025 CPT Game Designers. Crafted with creativity and code.</p>
   </footer>
 
 </body>

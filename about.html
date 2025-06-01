@@ -3,42 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us</title>
+  <title>The CPT Game Designers Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      line-height: 1.6;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1e1e24, #2a2a35, #1e1e24);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     header {
-      background: #111;
-      color: #fff;
-      padding: 1em 0;
+      background: rgba(70, 129, 137, 0.8);
+      padding: 2.5em 0;
       text-align: center;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      border-bottom: 4px solid #ac3931;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #ffffff;
+      text-shadow: 0 0 15px #ffffff;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #d3d3d3;
+      margin-top: 0.5rem;
     }
     nav {
-      background: #333;
-      padding: 0.5em;
+      background: rgba(172, 57, 49, 0.85);
+      padding: 1em 0;
       text-align: center;
+      box-shadow: 0 0 15px #ac3931;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: #ffffff;
+      margin: 0 30px;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: relative;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #ffffff;
+      transition: width 0.3s ease;
       margin: auto;
     }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 6px #ffffff;
+    }
+    section {
+      padding: 70px 40px;
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: rgba(46, 46, 60, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(214, 40, 40, 0.5);
+      backdrop-filter: blur(10px);
+    }
     h2 {
-      color: #003366;
+      font-size: 2.5rem;
+      color: #d62828;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #ac3931;
+    }
+    p, li {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #56c0c5;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 6px #468189;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+    }
+    ul li::before {
+      content: "🎮";
+      position: absolute;
+      left: 0;
+      color: #d62828;
     }
     footer {
-      background: #111;
-      color: #fff;
+      background: rgba(70, 129, 137, 0.9);
+      color: #ffffff;
       text-align: center;
-      padding: 1em 0;
+      padding: 2em 0;
+      margin-top: 60px;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+      section {
+        padding: 40px 20px;
+      }
     }
   </style>
 </head>
@@ -58,21 +163,22 @@
   </nav>
 
   <section>
-    <h2>About CPT Game Designers</h2>
+    <h2>About Us</h2>
     
-            <p><strong>CPT Game Designers</strong> was founded by passionate creators who believe in the power of games to entertain, teach, and inspire. With years of experience in both independent and collaborative game design, our mission is to help others turn their concepts into reality.</p>
-            <p>We work with:</p>
-            <ul>
-                <li>Solo developers and hobbyists</li>
-                <li>Educational institutions</li>
-                <li>Startups and established companies</li>
-            </ul>
-            <p>From board games to digital games, we bring creative, user-focused designs to every project.</p>
+            <p>Curious about the minds behind your next great game? Our journey from passion to profession reflects our commitment to innovation and quality in game development.</p>
+            <h3>Origins</h3>
+            <p>It all began with our founder, Kiamehr Jabbarijahromi, who grew up brimming with game ideas but lacked the technical resources to bring them to life.</p>
+            <h3>Skill Development</h3>
+            <p>Determined to transform imagination into reality, Kiamehr dedicated himself to mastering game development, gradually building the skills to create the experiences he had always envisioned.</p>
+            <h3>First Success</h3>
+            <p>After releasing several critically acclaimed titles, Kiamehr recognized an opportunity to help others facing the same challenges he once did—bridging the gap between creative vision and technical execution.</p>
+            <h3>Growth and Vision</h3>
+            <p>What started as one developer's mission has evolved into the industry-leading team you know today. We've assembled talented designers, developers, and artists united by a shared passion for creating exceptional gaming experiences.</p>
         
   </section>
 
   <footer>
-    <p>&copy; 2025 CPT Game Designers. All rights reserved.</p>
+    <p>&copy; 2025 CPT Game Designers. Crafted with creativity and code.</p>
   </footer>
 
 </body>

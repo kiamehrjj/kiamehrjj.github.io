@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Portfolio: Creativity in Action</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1e1e24, #2a2a35, #1e1e24);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      background: rgba(70, 129, 137, 0.8);
+      padding: 2.5em 0;
+      text-align: center;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      border-bottom: 4px solid #ac3931;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #ffffff;
+      text-shadow: 0 0 15px #ffffff;
+    }
+    nav {
+      background: rgba(172, 57, 49, 0.85);
+      padding: 1em 0;
+      text-align: center;
+      box-shadow: 0 0 15px #ac3931;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #ffffff;
+      transition: width 0.3s ease;
+      margin: auto;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      padding: 70px 40px;
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: rgba(46, 46, 60, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(214, 40, 40, 0.5);
+      backdrop-filter: blur(10px);
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: #d62828;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #ac3931;
+    }
+    video {
+      display: block;
+      margin: 20px auto 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(70, 129, 137, 0.6);
+    }
+    footer {
+      background: rgba(70, 129, 137, 0.9);
+      color: #ffffff;
+      text-align: center;
+      padding: 2em 0;
+      margin-top: 60px;
+      box-shadow: 0 0 25px #468189;
+      backdrop-filter: blur(12px);
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CPT Game Designers</h1>
+    <p>Bringing Your Game Ideas to Life</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="booking.html">Book</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="guidelines.html">Guidelines</a>
+  </nav>
+
+  <section>
+    <h2>Completed Projects</h2>
+    
+<p>Quality and innovation define every project we undertake. Explore these samples from our portfolio to see how we bring game concepts to life with technical excellence and creative vision.</p>
+
+<h3>Katana Slasher</h3>
+<p>Experience the precision and fluidity of our physics engine in "Katana Slasher." This action-packed game features realistic cutting mechanics, allowing players to slice through various objects with satisfying visual and tactile feedback.</p>
+<video width="800" controls>
+  <source src="KatanaSlasher.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3>GlitchTopia</h3>
+<p>Dive into the vibrant, unpredictable world of "GlitchTopia," our open-world 2D platformer. Navigate through dynamically changing environments as you search for a way to escape the digital anomalies of this corrupted digital landscape.</p>
+<video width="800" controls>
+  <source src="GlitchTopia.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3>Thrower of Boxes</h3>
+<p>Unleash chaos and creativity in "Thrower of Boxes," showcasing our advanced physics engine. Experience realistic object interactions as you launch, stack, and demolish various items in this physics playground of unlimited possibilities.</p>
+<video width="800" controls>
+  <source src="ThrowerOfBoxes.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CPT Game Designers. Crafted with creativity and code.</p>
+  </footer>
+
+</body>
+</html>
